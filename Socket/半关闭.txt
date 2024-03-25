@@ -1,0 +1,13 @@
+半关闭状态:
+    例:
+        A跟B四次挥手过程中, A第一次向B发送FIN信号, B发回ACK后没有再次向A发送FIN信号
+        此时A处于只能接收来自于B的数据而不能发送数据, A的状态就叫做半关闭状态
+    实现半关闭状态可以使用shutdown函数
+
+#include <sys/socket.h>
+
+int shutdown(int sockfd, int how);
+    how:
+        SHUT_RD
+        SHUT_WR
+        SHUT_RDWR

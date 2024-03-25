@@ -1,0 +1,64 @@
+首先生成调试代码
+gcc xxx.c -o  xxx -g
+然后执行
+gdb xxx[目标文件名]
+可以设置参数
+set args [arg1, arg2]
+可以显示参数
+show args
+使用list 指令显示加上行号的代码
+使用list [n]显示第n行开始的代码
+使用list main显示main函数
+
+list [文件名]:[行号]显示指定文件的指定行
+list [文件名]:[函数名]显示指定文件的指定函数
+
+设置显示行数
+set listsize
+
+设置断点
+break [n] 在第n行设置断点
+break [函数名] 在函数处设置断点
+break [文件名]:[n]
+break [文件名]:[函数名]
+
+info break 显示断点信息
+
+删除断点
+d/del/delete [n] 删除第n个断点
+
+禁用断点
+disable [n]
+
+使能断点
+enable [n]
+
+设置条件断点
+break [n] if i == 5
+
+运行GDB程序
+start (停在第一行)
+run (停在断点)
+
+继续运行至下一断点
+continue
+
+向下执行一行代码(不会进入函数体)
+next
+
+变量操作
+print [变量名]
+ptype [变量名] 打印变量类型
+
+向下单步调试(遇到函数进入函数体)
+step
+finish 跳出函数体
+
+自动变量操作
+display [num] 自动打印指定变量的值
+info display
+undisplay [n]
+
+set var [变量名] = [变量值]
+until 跳出循环
+

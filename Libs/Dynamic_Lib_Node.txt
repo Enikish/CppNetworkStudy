@@ -1,0 +1,10 @@
+动态库命名规则:
+eg: libxxx.so
+prefix: lib
+name: xxx
+suffix: .so
+动态库的创建
+1.先使用gcc 得到.o 文件，得到和位置无关的代码
+  gcc -c -fpic/-fPIC xxx.c yyy.c
+2.gcc得到动态库
+  gcc -shared xxx.o yyy.o -o lib+[动态库名称].so

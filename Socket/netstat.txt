@@ -1,0 +1,4 @@
+netstat:
+    -a 显示所有的socket
+    -p 显示正在使用socket的进程的名称
+    -n 直接使用ip地址, 而不通过域名服务器
